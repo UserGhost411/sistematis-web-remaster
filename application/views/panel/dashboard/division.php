@@ -49,10 +49,10 @@
 
 <!-- /.card.mb-4-->
 <div class="row">
-    <div class="col-7">
+    <div class="col-lg-7">
         <div class="card mb-4">
             <div class="card-header"> <a href="<?= base_url("incident") ?>">Incident</a></div>
-            <div class="card-body">
+            <div class="card-body table-responsive">
                 <table class="table table-sm table-striped border" id="incident_actives">
                     <thead>
                         <tr>
@@ -69,10 +69,10 @@
             </div>
         </div>
     </div>
-    <div class="col-5">
+    <div class="col-lg-5">
         <div class="card mb-4">
             <div class="card-header"> <a href="<?= base_url("stock") ?>">Low Stocks</a></div>
-            <div class="card-body">
+            <div class="card-body table-responsive">
                 <table class="table table-sm table-striped border" id="stock_needs">
                     <thead>
                         <tr>

@@ -24,8 +24,8 @@
         <?php } ?>
         <div class="mb-3">
             <label for="incident_name" class="form-label">Incident Name</label>
-            <input type="text" class="form-control" id="incident_name" placeholder="Enter Incident Name" value="<?= $checklist!=null?"Failure Check at Checklist#$checklist->id ($checklist->checklist_name)":"" ?>" required>
-            <?= ($checklist!=null?"<input type='hidden' name='checklist_id' value='$checklist->id'>":"") ?>
+            <input type="text" class="form-control" id="incident_name" placeholder="Enter Incident Name" value="<?= (isset($checklist) && $checklist!=null?"Failure Check at Checklist#$checklist->id ($checklist->checklist_name)":"") ?>" required>
+            <?= ((isset($checklist) && $checklist!=null)?"<input type='hidden' name='checklist_id' value='$checklist->id'>":"") ?>
         </div>
         <div class="mb-3">
             <label for="incident_device" class="form-label">Incident Device</label>

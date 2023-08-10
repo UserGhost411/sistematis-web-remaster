@@ -6,21 +6,24 @@
                 <div id="myDatePicker" data-coreui-date="<?= date("Y-m-d") ?>" data-coreui-locale="en-UK" data-coreui-toggle="date-picker" data-coreui-input-read-only="true"></div>
             </div>
         </div>
-        <table class="table table-striped border" id="companylist">
-            <thead>
-                <tr>
-                    <th>Checklist Name</th>
-                    <th>Shift</th>
-                    <th>Actor</th>
-                    <th>Checklist Status</th>
-                    <th>Date</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div class="table-responsive">
+            <table class="table table-striped border" id="companylist">
+                <thead>
+                    <tr>
+                        <th>Checklist Name</th>
+                        <th>Shift</th>
+                        <th>Actor</th>
+                        <th>Checklist Status</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </div>
 <?php $this->load->view('include/modal', ["size" => "md", "title" => "Checklist", "vertical" => true, "add_btn" => '<button type="button" class="btn btn-primary" onclick="save(this);">Save changes</button>']); ?>

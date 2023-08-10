@@ -3,7 +3,7 @@
 </script>
 <div class="card mb-4">
     <div class="card-header"> Access "<?= $privi->privilege_name ?>" Management</a></div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table class="table table-striped border" id="accesslist">
             <thead>
                 <tr>

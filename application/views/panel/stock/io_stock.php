@@ -7,8 +7,8 @@
 <div class="mb-3">
     <label for="stock_status" class="form-label">Stock Exchange State</label>
     <select class="form-select" id="stock_status">
-    <option value="1">Enter / In</option>
-    <option value="0">Leave / Out</option>
+    <option value="1">Stock Masuk</option>
+    <option value="0">Stock Keluar</option>
     </select>
 </div>
 <div class="mb-3">
@@ -16,6 +16,6 @@
     <input type="number" class="form-control" id="stock_total"  placeholder="Enter Total Stock Exchange"  value="0" required>
 </div>
 <div class="mb-3">
-    <label for="stock_reason" class="form-label">Exchange Reason</label>
+    <label for="stock_reason" class="form-label">Deskripsi</label>
     <textarea type="text" class="form-control" id="stock_reason" placeholder="Enter Exchange Stock Reason" required></textarea>
 </div>

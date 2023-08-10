@@ -1,14 +1,61 @@
+<div class="row">
+    <div class="col-sm-6 col-lg-3">
+        <div class="card mb-4 text-white bg-primary-gradient">
+            <div class="card-body d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="fs-4 fw-semibold"><?= $this->db->get_where("account", [])->num_rows() ?></div>
+                    <div>Registered Users</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.col-->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card mb-4 text-white bg-info-gradient">
+            <div class="card-body d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="fs-4 fw-semibold"><?= $this->db->get_where("company", [])->num_rows() ?></div>
+                    <div>Registered Company</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card mb-4 text-white bg-warning-gradient">
+            <div class="card-body d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="fs-4 fw-semibold"><?= $this->db->get_where("stock", [])->num_rows() ?></div>
+                    <div>Stock Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card mb-4 text-white bg-danger-gradient">
+            <div class="card-body d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="fs-4 fw-semibold"><?= $this->db->get_where("incident", [])->num_rows() ?></div>
+                    <div>Incident Reported</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-->
+</div>
 <div class="card mb-4">
     <div class="card-header"> Incidents</a></div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table class="table table-striped border" id="companylist">
             <thead>
                 <tr>
                     <th>Incident Title</th>
                     <th>Device</th>
                     <th>Status</th>
-                    <th>Reporter</th>
-                    <th>Reported at</th>
+                    <th>Pelapor</th>
+                    <th>Date</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -212,7 +259,7 @@
                     render: function(data, type, row) {
                         return `
                             <button <?= (($permission->u) ? "" : "disabled") ?> class="btn text-white btn-sm btn-success me-2" onclick="edit(this)" href="<?= base_url("incident/edit/") ?>${data}" data-coreui-toggle="tooltip" data-coreui-placement="bottom" title="Edit"><i class="fas fa-pencil-alt"></i></button>
-                            <button <?= (($permission->c) ? "" : "disabled") ?> onclick="report(this)" href="<?= base_url("incident/report/") ?>${data}" class="btn text-white btn-sm btn-info me-2" href="#" data-coreui-toggle="tooltip" data-coreui-placement="bottom" title="Report Incident"><i class="far fa-sticky-note"></i></button>
+                            <button <?= (($permission->c) ? "" : "disabled") ?> onclick="report(this)" href="<?= base_url("incident/report/") ?>${data}" class="btn text-white btn-sm btn-warning me-2" href="#" data-coreui-toggle="tooltip" data-coreui-placement="bottom" title="Update"><i class="far fa-sticky-note"></i></button>
                             <button class="btn text-white btn-sm btn-info me-2" d-id="${data}" onclick="history(this)" href="<?= base_url("incident/history/") ?>${data}" data-coreui-toggle="tooltip" data-coreui-placement="bottom" title="History"><i class="far fa-history"></i></button>
                             <button <?= ($permission->d ? "" : "disabled") ?> class="btn text-white btn-sm btn-danger" onclick="remove(${data})" href="#" data-coreui-toggle="tooltip" data-coreui-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></button>`;
                     }

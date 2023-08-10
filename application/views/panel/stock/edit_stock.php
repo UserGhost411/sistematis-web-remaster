@@ -1,14 +1,6 @@
 
 <input type="hidden" id="stock_id" value="<?= $data->id ?>">
 <div class="mb-3">
-    <label for="stock_name" class="form-label">Stock Name</label>
-    <input type="text" class="form-control" id="stock_name" value="<?= htmlspecialchars($data->stock_name) ?>" placeholder="Enter Stock Name" required>
-</div>
-<div class="mb-3">
-    <label for="stock_location" class="form-label">Stock Location</label>
-    <input type="text" class="form-control" id="stock_location" value="<?= htmlspecialchars($data->stock_location) ?>"  placeholder="Enter Stock Location" required>
-</div>
-<div class="mb-3">
     <label for="stock_type" class="form-label">Stock Type</label>
     <select class="form-select select2" id="stock_type">
         <?php
@@ -17,6 +9,14 @@
         }
         ?>
     </select>
+</div>
+<div class="mb-3">
+    <label for="stock_name" class="form-label">Stock Name</label>
+    <input type="text" class="form-control" id="stock_name" value="<?= htmlspecialchars($data->stock_name) ?>" placeholder="Enter Stock Name" required>
+</div>
+<div class="mb-3">
+    <label for="stock_location" class="form-label">Stock Location</label>
+    <input type="text" class="form-control" id="stock_location" value="<?= htmlspecialchars($data->stock_location) ?>"  placeholder="Enter Stock Location" required>
 </div>
 <div class="mb-3">
     <label for="stock_desc" class="form-label">Stock Information</label>
