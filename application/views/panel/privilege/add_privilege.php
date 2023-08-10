@@ -1,0 +1,4 @@
+<div class="mb-3">
+    <label for="privilege_name" class="form-label">Privilege Name</label>
+    <input type="text" class="form-control" id="privilege_name" placeholder="Enter Privilege Name" required>
+</div>
