@@ -1,6 +1,6 @@
 <div class="card mb-4">
     <div class="card-header"> Device Management</a></div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table class="table table-striped border" id="companylist">
             <thead>
                 <tr>

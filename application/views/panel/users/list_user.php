@@ -1,6 +1,6 @@
 <div class="card mb-4">
     <div class="card-header"> Users Management</a></div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table class="table table-striped border" id="userlist">
             <thead>
                 <tr>
@@ -10,7 +10,7 @@
                     <th>Company</th>
                     <th>Division</th>
                     <th>Role</th>
-                    <th>Date registered</th>
+                    <th>Created</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>

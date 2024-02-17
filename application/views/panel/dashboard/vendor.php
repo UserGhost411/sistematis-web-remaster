@@ -52,7 +52,7 @@
     <div class="col-12">
         <div class="card mb-4">
             <div class="card-header"> <a href="<?= base_url("incident") ?>">Incident</a></div>
-            <div class="card-body">
+            <div class="card-body table-responsive">
                 <table class="table table-sm table-striped border" id="incident_actives">
                     <thead>
                         <tr>
