@@ -36,7 +36,7 @@ aplikasi sistematis (web based) dan basic API
    - Open your web browser and navigate to localhost using the port that you have configured for the application.
 
 ## Notes
-
+- Change BaseURL Config value on `application/config/config.php` to your relative path (example : `http://localhost/sistematis`)
 - The `sistematis_new.sql` file in the root directory contains a backup of the database used by this application. You need to import this file into your MySQL database before running the application.
 - Make sure to configure the database connection in the `application/config/database.php` file before running the application.
 - there 3 login account on backup db
